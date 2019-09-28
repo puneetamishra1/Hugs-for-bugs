@@ -39,7 +39,7 @@ public class BaseTestClass extends BaseDriver {
 
     boolean testResults = false;
 
-    public static String environment = System.getProperty("environment", "local");
+    public static String environment = System.getProperty("environment", "version2");
     public String execution_Type = System.getProperty("execution_Type", "regression");
     public String driver_Type = System.getProperty("driver_Type", "Chrome");
 

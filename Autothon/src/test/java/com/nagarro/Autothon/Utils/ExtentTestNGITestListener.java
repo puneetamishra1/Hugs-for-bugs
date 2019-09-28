@@ -46,6 +46,7 @@ public class ExtentTestNGITestListener implements ITestListener, ISuiteListener 
     public synchronized void onStart(ITestContext context) {
 
         className = context.getName();
+        base.log("88888888888888888"+className);
         ExtentTest parent = extent.createTest(context.getName());
         parentTest.set(parent);
     }
@@ -80,6 +81,7 @@ public class ExtentTestNGITestListener implements ITestListener, ISuiteListener 
     public synchronized void onTestFailure(ITestResult result) {
         test.get().fail(result.getThrowable());
         String MethodName = result.getMethod().getMethodName();
+        base.log(MethodName);
         setExecutionStatus("FAILED", MethodName);
         driver = BaseDriver.getDriver();
         captureScreenShot();
@@ -205,7 +207,7 @@ public class ExtentTestNGITestListener implements ITestListener, ISuiteListener 
 
         copyExcelReport();
         copyReportToOld();
-        sendReport();
+//        sendReport();
     }
 
 
@@ -218,6 +220,11 @@ public class ExtentTestNGITestListener implements ITestListener, ISuiteListener 
         base.log(Status);
         Xls_Reader datatable = new Xls_Reader(base.getPropertyValue("autothon_TestAutomation"));
         int row = datatable.getCellRowNum(className, "TestCaseID", TestcaseID);
+        base.log("ClasName====="+className);
+        base.log("Method====="+TestcaseID);
+
+
+
         datatable.setCellData(className, "Result", row, Status);
         datatable.setCellColor(className, "Result", row, Status);
     }
@@ -230,10 +237,9 @@ public class ExtentTestNGITestListener implements ITestListener, ISuiteListener 
      ***************************************************************/
     public void sendReport()
     {
-//        final String username = "metcashautoct@gmail.com";
-//        final String password = "nagarro@1";
-        final String username = "puneeta.mishra@nagarro.com";
-        final String password = "P@ssw0rd2345";
+
+        final String username = "********";
+        final String password = "*******";
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");

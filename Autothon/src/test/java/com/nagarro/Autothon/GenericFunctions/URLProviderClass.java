@@ -10,6 +10,8 @@ public class URLProviderClass  extends  BaseTestClass{
         System.out.print(environment);
         if (environment.toLowerCase().contains("local"))
             return "https://autothon-nagarro-frontend-y03.azurewebsites.net/";
+        if (environment.toLowerCase().contains("version2"))
+            return "https://autothon-nagarro-frontend-c03.azurewebsites.net/";
         else
             return "https://autothon-nagarro-frontend-y03.azurewebsites.net/";
     }
