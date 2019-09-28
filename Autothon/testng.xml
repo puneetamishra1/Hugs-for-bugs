@@ -5,10 +5,16 @@
         <listener class-name="com.nagarro.Autothon.Utils.ExtentTestNGITestListener"/>
     </listeners>
 
-    <test name="TestCases_MovieRentalServiceLoginPage" preserve-order="true">
+    <test name="TestCases_MovieRentalService" preserve-order="true">
         <classes>
-            <class name="com.nagarro.Autothon.TestCases.TestCases_MovieRentalServiceLoginPage">
+            <class name="com.nagarro.Autothon.TestCases.TestCases_MovieRentalService">
             </class>
         </classes>
     </test>
+
+
+
+
+
+
 </suite>
