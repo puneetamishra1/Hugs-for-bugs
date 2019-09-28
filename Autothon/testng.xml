@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Autothon">
+    <listeners>
+        <listener class-name="com.nagarro.Autothon.Utils.ExtentTestNGITestListener"/>
+    </listeners>
+
+    <test name="TestCases_MovieRentalServiceLoginPage" preserve-order="true">
+        <classes>
+            <class name="com.nagarro.Autothon.TestCases.TestCases_MovieRentalServiceLoginPage">
+            </class>
+        </classes>
+    </test>
+</suite>
